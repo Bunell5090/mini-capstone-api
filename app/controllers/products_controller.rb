@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def show
-    products = Products.find_by(id: params["id"])
+    products = Product.find_by(id: params["id"])
     render json: products.as_json
   end
 
