@@ -7,4 +7,5 @@ Product.create(name: "Air Jordan 3's", price: 350, image_url: "https://static.ni
 
 Product.create(name: "Sony Playstation 5", price: 700, image_url: "https://i5.walmartimages.com/asr/fd596ed4-bf03-4ecb-a3b0-7a9c0067df83.bb8f535c7677cebdd4010741c6476d3a.png", description: "Sony Playstation 5 Bundle")
 
+Product.create(name: "Sony Playstation 4", price: 500, image_url: "https://m.media-amazon.com/images/I/61n-yWHcmSS._AC_SX355_.jpg", description: "Sony Playstation 4 Bundle")
 item.save
