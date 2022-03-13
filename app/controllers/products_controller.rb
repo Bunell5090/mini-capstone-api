@@ -1,4 +1,8 @@
 class ProductsController < ApplicationController
+  def get_one_product
+    
+  end
+  
   def all_products_method
     my_products = Product.all
     render json: my_products.as_json
