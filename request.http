@@ -12,3 +12,11 @@ Content-Type: application/json
      "image_url": "image_url",
      "description": "description"
 }
+
+### Product Update
+PATCH http://localhost:3000/Products/3
+Content-Type: application/json
+
+{
+  "title": "Playstation 5"
+}
