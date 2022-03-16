@@ -1,4 +1,11 @@
 class Product < ApplicationRecord
+  validates :name, presence: true 
+  validates :name, uniqueness: true
+  validates :price, presence: true 
+  validates :price, numericality: true
+  validates :description, length: { in 10..500 }
+ 
+
   def is_discounted?
    price <= 10
   end
@@ -16,5 +23,6 @@ def discount_limits
     errors.add(:price, "cannot be less than or equal to cost")
   end
 end
+
 
 end

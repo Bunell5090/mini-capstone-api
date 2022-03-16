@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    products = Product.find_by(id: params["id"])
+    id = params[:id]
+    product = Product.find_by(id: id)
     render json: products(methods: [:is_discounted?, :tax, :total])
   end
 
@@ -16,19 +17,25 @@ class ProductsController < ApplicationController
       image_url: params["image_url"], 
       description: params["description"]
     )
-    product.save
-    render json: product
+    if product.save #happy path
+      render json: product
+    else #sad path
+      render json: {error_messages: product.errors.full_messages}, status: 422
+    end
   end
 
   def update
-    product_id = params["id"]
-    product = Product.find(product_id)
+    id = params[:id]
+    product = Product.find_by(id: id)
     product.name = params["name"] || product.name
     product.price = params["price"] || product.price
     product.image_url = params["image_url"] || product.image_url
     product.description = params["description"] || product.description
-    product.save
-    render json: product
+    if product.save #happy path
+      render json: product
+    else #sad path
+      render json: {error_messages: product.errors.full_messages}, status: 422
+    end
   end
 
   def destroy
