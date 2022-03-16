@@ -11,4 +11,10 @@ class Product < ApplicationRecord
     price + tax
   end
 
+def discount_limits
+  if price <= cost
+    errors.add(:price, "cannot be less than or equal to cost")
+  end
+end
+
 end
