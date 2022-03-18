@@ -5,6 +5,6 @@ class Supplier < ApplicationRecord
   validates :phone_number, presence: true 
   validates :phone_number, length: 10
 
-
+  has_many :products
 
 end
