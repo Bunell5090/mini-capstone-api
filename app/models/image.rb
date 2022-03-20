@@ -4,5 +4,5 @@ class Image < ApplicationRecord
   validates :url, uniqueness: true
   validates :url, presence: true
  
-  belongs_to :Product
+  belongs_to :product
 end
