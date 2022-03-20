@@ -25,7 +25,7 @@ class SuppliersController < ApplicationController
 
   def update
     id = params[:id]
-    supplier = .find_by(id: id)
+    supplier = find_by(id: id)
     supplier.name = params["name"] || supplier.name
     supplier.email = params["email"] || supplier.email
     supplier.phone_number = params["phone_number"] || supplier.phone_number
