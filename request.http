@@ -37,3 +37,12 @@ Content-Type: application/json
   "password": "drowssap123",
   "password_confirmation": "drowssap123"
 }
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "password"
+}
