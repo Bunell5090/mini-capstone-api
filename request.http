@@ -26,3 +26,14 @@ DELETE http://localhost:3000/products/4
 
 ### Supplier Index
 GET http://localhost:3000/suppliers
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Ben Unell",
+  "email": "Bunell@test.com",
+  "password": "drowssap123",
+  "password_confirmation": "drowssap123"
+}
