@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
       name: params["name"], 
       price: params["price"], 
       description: params["description"]
+      user_id: current_user.id
     )
     if product.save #happy path
       render json: product
