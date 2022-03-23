@@ -7,8 +7,8 @@ class Product < ApplicationRecord
   validates :description, length: { minimum: 10, maximum: 500 }
  
   belongs_to :supplier
-  belongs_to :user
-  has_many :image
+  has_many :images
+  has_many :orders
 
   def is_discounted?
    price <= 10
