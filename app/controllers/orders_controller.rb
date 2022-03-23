@@ -1,17 +1,28 @@
 class OrdersController < ApplicationController
+  def index
+    order = Order.all
+    render json: order.as_json
+  end
+
   def create
-    product = Product.new(
-      user_id: params["user_id"], 
-      product_id: params["product_id"], 
-      quantity: params["quantity"], 
-      subtotal: params["subtotal"],
-      tax: params["tax"],
-      total: pramas["total"]
+    order = Order.new(
+      user_id: params[:user_id], 
+      product_id: params[:product_id], 
+      quantity: params[:quantity], 
+      subtotal: params[:subtotal],
+      tax: params[:tax],
+      total: params[:total]
     )
-    if product.save #happy path
-      render json: product
+    if order.save #happy path
+      render json: order
     else #sad path
-      render json: {error_messages: product.errors.full_messages}, status: 422
+      render json: {error_messages: order.errors.full_messages}, status: 422
     end
   end
+
+  def show
+    order = Order.find_by(id: params["id"])
+    render json: order.as_json
+  end
+  
 end

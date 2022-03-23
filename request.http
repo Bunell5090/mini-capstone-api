@@ -52,11 +52,12 @@ Content-Type: application/json
 POST http://localhost:3000/orders
 Content-Type: application/json
 
-{
- "quantity": "quantity",
- "subtotal": "subtotal",
- "tax": "tax",
- "total": "total"
+{"user_id": 2,
+ "product_id": 0,
+ "quantity": 10,
+ "subtotal": 10,
+ "tax": 5,
+ "total": 15
 
 }
 
