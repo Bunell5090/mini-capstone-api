@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user
+  
+  
   def index
     order = Order.all
     render json: order.as_json
@@ -13,9 +16,9 @@ class OrdersController < ApplicationController
       tax: params[:tax],
       total: params[:total]
     )
-    if order.save #happy path
+    if order.save 
       render json: order
-    else #sad path
+    else 
       render json: {error_messages: order.errors.full_messages}, status: 422
     end
   end
