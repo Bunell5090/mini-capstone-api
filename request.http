@@ -1,6 +1,6 @@
 ### Product index
 GET http://localhost:3000/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgxNzM1ODV9._fE4pD0vv4VALNMXpSaE7-1MiJAZ6zJLQFMJdp_bDn0
 
 ### Product Create
 POST http://localhost:3000/products
@@ -34,9 +34,9 @@ Content-Type: application/json
 
 {
   "name": "Ben Unell",
-  "email": "Bunell@test.com",
-  "password": "drowssap123",
-  "password_confirmation": "drowssap123"
+  "email": "test@test.com",
+  "password": "password",
+  "password_confirmation": "password"
 }
 
 ### Sessions create (login)
@@ -63,6 +63,6 @@ Content-Type: application/json
 
 ### Order index
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjozLCJleHAiOjE2Mjk5OTI4NjR9.G2ExsrDYn3oE0vJkvm4T6Po2GbNpH5cqTEaVPVuK_MA
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgxNzM1ODV9._fE4pD0vv4VALNMXpSaE7-1MiJAZ6zJLQFMJdp_bDn0
 
 ### Order show
