@@ -1,3 +1,5 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgyNDQxNzV9.Fqbcg1mj_7ApD0cTF2dJoecjywSQbohm3l9eh2YZbgo
+
 ### Product index
 GET http://localhost:3000/products
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgxNzM1ODV9._fE4pD0vv4VALNMXpSaE7-1MiJAZ6zJLQFMJdp_bDn0
@@ -50,6 +52,7 @@ Content-Type: application/json
 
 ### Orders create
 POST http://localhost:3000/orders
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {"user_id": 1,
@@ -63,6 +66,8 @@ Content-Type: application/json
 
 ### Order index
 GET http://localhost:3000/orders
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDgxNzM1ODV9._fE4pD0vv4VALNMXpSaE7-1MiJAZ6zJLQFMJdp_bDn0
+Authorization: Bearer {{jwt}}
 
 ### Order show
+GET http://localhost:3000/orders/1
+Authorization: Bearer {{jwt}}
