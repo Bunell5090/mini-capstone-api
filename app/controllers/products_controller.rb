@@ -17,7 +17,7 @@ before_action :authenticate_admin, except: [:index, :show]
     product = Product.new(
       name: params["name"], 
       price: params["price"], 
-      description: params["description"]
+      description: params["description"],
       user_id: current_user.id
     )
     if product.save #happy path
