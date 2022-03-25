@@ -10,7 +10,7 @@ before_action :authenticate_admin, except: [:index, :show]
   def show
     id = params[:id]
     product = Product.find_by(id: id)
-    render json: products(methods: [:is_discounted?, :tax, :total])
+    render json: product(methods: [:is_discounted?, :tax, :total])
   end
 
   def create
