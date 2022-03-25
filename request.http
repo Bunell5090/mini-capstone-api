@@ -81,6 +81,12 @@ Content-Type: application/json
 {
  "user_id": 1,
  "product_id": 2,
- "quantity": 10
+ "quantity": 10,
+ "order_id": 1, 
+ "status": "carted"
  
 }
+
+### Carted Products index
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}

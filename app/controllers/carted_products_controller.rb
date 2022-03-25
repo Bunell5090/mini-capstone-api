@@ -1,25 +1,23 @@
 class CartedProductsController < ApplicationController
 
   def index
-    pp current_user
-    cartedproducts = CartedProduct.all
-    render json: cartedproducts
+    carted_products = current_user.carted_products.where(status: "carted")
+    render json: carted_products.as_json
   end
 
   def create
-    cartedproduct = CartedProduct.find_by(id: params[:product_id])
-
-    cartedproduct = CartedProduct.new(
+    carted_product = CartedProduct.new(
       user_id: current_user.id,
       product_id: params[:product_id],
+      order_id: nil,
       quantity: params[:quantity],
-      order_id: nil
+      status: "carted"
     )
 
-    if cartedproduct.save
-      render json: cartedproduct.as_json
+    if carted_product.save
+      render json: carted_product.as_json
     else
-      render json: {error_messages: cartedproduct.errors.full_messages}, status: 422
+      render json: {error_messages: carted_product.errors.full_messages}, status: 422
     end
   end
 

@@ -8,7 +8,8 @@ Supplier.create!([
 ])
 CartedProduct.create!([
   {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil},
-  {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil}
+  {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil},
+  {user_id: 1, product_id: 2, quantity: 10, status: "carted", order_id: nil}
 ])
 Product.create!([
   {name: "Air Jordan 3's", price: "350.0", description: "Nike Air Jordan 3 Low-Top", rating: nil, cost: nil, quantity: nil, supplier_id: 1, user_id: nil},
