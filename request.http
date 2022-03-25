@@ -55,7 +55,8 @@ POST http://localhost:3000/orders
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-{"user_id": 1,
+{
+ "user_id": 1,
  "product_id": 2,
  "quantity": 10,
  "subtotal": 10,
@@ -77,8 +78,9 @@ POST http://localhost:3000/carted_products
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-{"user_id": 1,
+{
+ "user_id": 1,
  "product_id": 2,
- "quantity": 10,
+ "quantity": 10
  
 }
