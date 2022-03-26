@@ -9,6 +9,8 @@ Supplier.create!([
 CartedProduct.create!([
   {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil},
   {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil},
+  {user_id: 1, product_id: 2, quantity: 10, status: "carted", order_id: nil},
+  {user_id: 1, product_id: 2, quantity: 10, status: "carted", order_id: nil},
   {user_id: 1, product_id: 2, quantity: 10, status: "carted", order_id: nil}
 ])
 Product.create!([
