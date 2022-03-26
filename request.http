@@ -56,13 +56,10 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
- "user_id": 1,
- "product_id": 2,
- "quantity": 10,
- "subtotal": 10,
- "tax": 5,
- "total": 15
 
+ "product_id": 2,
+ "quantity": 10
+ 
 }
 
 ### Order index
