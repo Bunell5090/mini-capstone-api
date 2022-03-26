@@ -56,10 +56,8 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-
  "product_id": 2,
  "quantity": 10
- 
 }
 
 ### Order index
