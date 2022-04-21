@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA1ODQyMjF9.Gm48V27arF6eIYT0guwRh3Kqpg-eSI_UaHc5p0iBpKQ
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTA1ODYyNjd9.oxHx_y4SX6FoSdx8xdp0NRQgTo3wLEg7_ByO4ukFP3w
 
 ### Product index
 GET http://localhost:3000/products
@@ -9,7 +9,7 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "name": "name",
+    "name": "name2",
      "id": "id",
      "price": "price",
      "image_url": "image_url",

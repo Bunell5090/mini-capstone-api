@@ -3,17 +3,11 @@ Category.create!([
   {name: "Video Game Systems"}
 ])
 Supplier.create!([
-  {name: "Ben Unell", email: "BUnell@test.com", phone_number: "7735551234"},
+  {name: "Benjy Unell", email: "BUnell@test.com", phone_number: "7735551234"},
   {name: "Chloe Unell", email: "CUnell@test.com", phone_number: "7735555678"}
 ])
 CartedProduct.create!([
-  {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil},
-  {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil},
-  {user_id: 1, product_id: 2, quantity: 10, status: "purchased", order_id: 4},
-  {user_id: 1, product_id: 2, quantity: 10, status: "purchased", order_id: 4},
-  {user_id: 1, product_id: 2, quantity: 10, status: "purchased", order_id: 4},
-  {user_id: 1, product_id: 2, quantity: 10, status: "purchased", order_id: 4},
-  {user_id: 1, product_id: 2, quantity: 10, status: "purchased", order_id: 4}
+  {user_id: 1, product_id: 2, quantity: 10, status: nil, order_id: nil}
 ])
 Product.create!([
   {name: "Air Jordan 3's", price: "350.0", description: "Nike Air Jordan 3 Low-Top", rating: nil, cost: nil, quantity: nil, supplier_id: 1, user_id: nil},
@@ -21,10 +15,7 @@ Product.create!([
   {name: "Air Jordan 2's", price: "150.0", description: "Nike Air Jordan 2 Low-Top", rating: nil, cost: nil, quantity: nil, supplier_id: 1, user_id: nil}
 ])
 Order.create!([
-  {user_id: 1, subtotal: "10.0", tax: "5.0", total: "15.0"},
-  {user_id: 1, subtotal: "10.0", tax: "5.0", total: "15.0"},
-  {user_id: 1, subtotal: "3500.0", tax: "315.0", total: "3815.0"},
-  {user_id: 1, subtotal: "17500.0", tax: "1575.0", total: "19075.0"}
+  {user_id: 1, subtotal: "10.0", tax: "5.0", total: "15.0"}
 ])
 User.create!([
   {name: "Ben Unell", email: "test@test.com", password_digest: "$2a$12$bvA1PBiHW2riN.KF/xvA.u7wjlnrvMqiGRaZPxsDLD9cQ6kMQaVja", admin: false}
